@@ -1,0 +1,40 @@
+<!-- include header -->
+<%- include('include/_header') %>
+    <!-- end include header -->
+
+
+    <!-- add user form -->
+
+    <!-- start main section -->
+
+    <main id="site-main">
+        <div class="container">
+
+            <div class="box-nav d-flex justify-between">
+                <div class="filter">
+                    <a href="/"><i class="fa fa-angle-double-left"></i>All Users</a>
+                </div>
+            </div>
+
+            <div class="form-title text-center">
+                <h2 class="text-dark">New User</h2>
+                <span class="text-light">Use the below form to create a new account</span>
+            </div>
+
+            <!-- this will be populated using the ejs template inheritance i.e the content of this will be rendered from a file present in include folder name "_form.ejs" -->
+
+            <%- include('include/_form') %>
+
+
+        </div>
+    </main>
+
+
+
+    <!-- end main section -->
+
+
+
+    <!-- include footer -->
+    <%- include('include/_footer') %>
+        <!-- /include footer -->

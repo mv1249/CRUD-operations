@@ -1,0 +1,43 @@
+<!-- the users is a list of objects which is being passed from the routes,so i will be iterating through them and keep keep filling the records as shown ↓ -->
+
+<% for(var i = 0; i < users.length ; i++) {%>
+    <tr>
+        <td>
+            <%= i + 1 %>
+        </td>
+        <td>
+            <%= users[i].name %>
+        </td>
+        <td>
+            <%= users[i].email %>
+        </td>
+        <td>
+            <%= users[i].gender %>
+        </td>
+        <td>
+            <%= users[i].status %>
+        </td>
+        <td>
+
+
+
+            <!-- update -->
+
+            <!-- in case of update,i will be passing the id of the user as well which need to be updated!,so for that in teh get request i have to pass the id of the user,as shown ↓ -->
+
+
+            <a href="/update-user?id=<%= users[i]._id%>" class="btn border-shadow update">
+                <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+            </a>
+
+            <!-- delete -->
+
+            <a class="btn border-shadow delete" data-id=<%=users[i]._id%> >
+                <span class="text-gradient"><i class="fas fa-times"></i></span>
+            </a>
+        </td>
+
+
+
+    </tr>
+    <% } %>

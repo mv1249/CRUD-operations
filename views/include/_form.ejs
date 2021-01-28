@@ -1,0 +1,73 @@
+<!-- form-handling -->
+
+<!-- this form is for adding the user,and the similar form i will be using for updating the form as well!!,for adding the form,the id specified is add_user and for updating the form,the id is update_user-->
+
+<!-- i will pass the post request url to this form,if someone posts the data and clicks on save,the record gets stored in the database!! -->
+
+<!-- this route is present in the router.js file! -->
+
+
+<form action="/api/users" method="post" id="add_user">
+
+    <div class="new_user">
+
+        <!-- name -->
+        <div class="form-group">
+            <label for="name" class="text-light">Name</label>
+
+            <input type="hidden" name="id" value="">
+            <input type="text" name="name" value="" placeholder="Username">
+        </div>
+
+        <!-- email -->
+
+
+        <div class="form-group">
+            <label for="Email" class="text-light">Email</label>
+            <input type="text" name="email" value="" placeholder="example@gmail.com">
+        </div>
+
+        <!-- gender -->
+
+        <div class="form-group">
+            <label for="gender" class="text-light">Gender</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-2" name="gender" value="Male">
+                <label for="radio-2" class="radio-label">Male</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-3" name="gender" value="Female">
+                <label for="radio-3" class="radio-label">Female</label>
+            </div>
+        </div>
+
+
+        <!-- Status whether active or not -->
+
+
+        <div class="form-group">
+            <label for="gender" class="text-light">Status</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-4" name="status" value="Active">
+                <label for="radio-4" class="radio-label">Active</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-5" name="status" value="Inactive">
+                <label for="radio-5" class="radio-label">Inactive</label>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <!-- button -->
+
+    <div class="form-group">
+
+        <button type="submit" class="btn text-dark update">Save</button>
+    </div>
+
+
+
+</form>
